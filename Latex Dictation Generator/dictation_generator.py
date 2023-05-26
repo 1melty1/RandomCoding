@@ -13,8 +13,9 @@ def generate_table(shuffle, eng, chi, ans):
     table_content = ''
     # cut eng into separate lists
     eng = list(split(eng, 40))
+    chi = list(split(chi, 40))
     # for each sublist, generate a table
-    for eng in eng:
+    for eng, chi in zip(eng, chi):
         i=0
         if ans:
             for eng_word, chi_word in zip(eng, chi):
