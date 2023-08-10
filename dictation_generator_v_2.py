@@ -51,7 +51,7 @@ goodbye
 你好
 再見
 """)
-print("Name your text dict.txt")
+print("Name your text dict.txt and put it in the script directory")
 print()
 
 directory = str(Path(__file__).parent.resolve())
@@ -91,7 +91,7 @@ head = r"""\documentclass[UTF8]{article}
 doc = head + generate_table(eng=eng, chi=chi, ans=False) + "\n\\newpage\n\n" + generate_table(eng=eng, chi=chi, ans=True) + "\n\\end{document}"
 
 
-doc_file = open("Dict_questions.tex", "w")
+doc_file = open(f"{directory}/Dict_questions.tex", "w")
 doc_file.write(doc)
 doc_file.close()
 
